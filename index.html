@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drawing App</title>
+</head>
+<body>
+    <div class="top">
+        <header><img src="sun.png" id="sun"></header>
+    </div>
+    <div class="container">
+        <canvas class="paintbox" id="paintbox"></canvas>
+    </div>
+
+        <div class="tools">
+            <button  onclick="undoo()" type="button" class="button">Undo</button>
+            <button onclick="clearCanvas()" type="button" class="button">Clear</button>
+            <div onclick="change_color(this)" class="color-feild" style="background: red;"></div>
+            <div onclick="change_color(this)" class="color-feild" style="background: purple;"></div>
+            <div onclick="change_color(this)" class="color-feild" style="background: yellow;"></div>
+            <div onclick="change_color(this)" class="color-feild" style="background: darkblue;"></div>
+
+        <input onInput = "draw_color = this.value" type="color" class="color-picker">
+        <input  onInput = "draw_width = this.value"  type="range" min="1" max="100" class="pen-range">
+        </div>
+</body>
+<script src="script.js"></script>
+</html>
